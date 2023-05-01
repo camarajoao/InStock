@@ -1,0 +1,123 @@
+@use "../../../styles/partials/global" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.temp {
+    padding: 0 1rem;
+}
+
+.wh-header {
+    @include flex(null, column);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px 3px 0 0;
+
+    @include tablet {
+        @include flex(null, row);
+        padding: 2rem 2rem 1.5rem 2rem;
+    }
+
+    @include desktop {
+        padding: 2rem 2.5rem 1.5rem 2.5rem;
+    }
+
+    &__title {
+        @include textStyle ($primary-color-Instock-Black, 1.75rem, 2.25rem, 600);
+
+        @include tablet {
+            @include textStyle ($primary-color-Instock-Black, 2rem, 2.5rem, 600);
+        }
+    }
+
+    &__container {
+
+        @include tablet {
+            @include flex(null, row);
+            margin-left: auto;
+        }
+    }
+
+    &__search {
+        box-sizing: border-box;
+        position: relative;
+        margin: 1rem 0;
+
+        @include tablet {
+            margin: 0;
+            min-width: 11.5625rem;
+        }
+
+        @include desktop {
+            min-width: 17.125rem;
+        }
+
+        &-input {
+            @include textStyle ($primary-color-Instock-Black, 0.8125rem, 1.25rem, 400);
+            @include width-height(100%, 2.25rem);
+            border-radius: 1.25rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid $secondary-color-Cloud;
+            background-color: $primary-color-White;
+
+            @include tablet {
+                height: 2.375rem;
+            }
+
+            &::placeholder {
+                color: $secondary-color-Slate;
+
+                @include tablet {
+                    // @include textStyle ($primary-color-Instock-Black, 1rem, 1rem, 400);
+                }
+            }
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+
+            &:focus {
+                border: 1px solid $primary-color-Instock-Indigo;
+                outline: none;
+            }
+
+            @include tablet {
+                // @include width-height(24rem, 4rem);
+            }
+        }
+
+        &-icon {
+            cursor: pointer;
+            border: none;
+
+            &--height {
+                position: absolute;
+                top: .4rem;
+                right: .9rem;
+            }
+        }
+    }
+
+    &__button {
+        @include textStyle($primary-color-White, 0.8125rem, 1.25rem, 600);
+        height: 2.25rem;
+        width: 100%;
+        border-radius: 1.25rem;
+        background-color: $primary-color-Instock-Indigo;
+        border: none;
+        cursor: pointer;
+        padding: 0 1rem;
+
+        @include tablet {
+            height: 2.375rem;
+        }
+
+        &:hover {
+            background-color: $background-color-Graphite;
+        }
+
+        @include tablet {
+            width: 10.5rem;
+            margin-left: 1rem;
+        }
+    }
+}

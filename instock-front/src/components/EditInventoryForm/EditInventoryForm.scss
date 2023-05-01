@@ -1,0 +1,54 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.addInventoryItemForm {
+    &__input-sections {
+        @include tablet {
+            display: flex;
+            border-top: 1px solid $secondary-color-Cloud;
+            padding: 1.5rem 0rem;
+        }
+    }
+
+    &__buttons-container {
+        background-color: rgba(247, 248, 249, 0.7);
+        border-radius: 0px 0px 3px 3px;
+        padding: 1rem 1.5rem;
+        margin-top: 0.5rem;
+        display: flex;
+
+
+        @include tablet {
+            margin: 0;
+            padding: 1rem 2rem;
+            justify-content: flex-end;
+        }
+
+        @include desktop {
+            padding: 1rem 2.5rem;
+        }
+    }
+
+    &__message {
+        display: none;
+
+        &--success {
+            display: flex;
+            margin: 0rem 1.5rem;
+            padding: 1rem 0rem;
+            @include textStyle($supporting-color-Green, 1.25rem, 1.75rem, 600);
+
+            @include tablet {
+                margin: 0rem 2rem;
+                padding: 1rem 0rem;
+                @include textStyle($supporting-color-Green, 1.5rem, 2rem, 600);
+            }
+
+            @include desktop {
+                margin: 0rem 2.5rem;
+                padding: 1rem 0rem;
+            }
+        }
+    }
+}

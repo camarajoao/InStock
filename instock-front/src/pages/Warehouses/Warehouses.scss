@@ -1,0 +1,21 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.details-page {
+    background-color: $primary-color-White;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    margin: 0rem 1rem;
+    margin-top: -4rem;
+
+    @include tablet {
+        margin: 0rem 2rem;
+        margin-top: -5.875rem;
+    }
+
+    @include desktop {
+        margin: 0rem 8.125rem;
+        margin-top: -5.875rem;
+    }
+}

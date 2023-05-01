@@ -1,0 +1,160 @@
+@use "../../../styles/partials/global" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.temp {
+    padding: 0 1rem;
+}
+
+.wh-ls-item {
+    width: 100%;
+    background-color: $primary-color-White;
+    padding: 1rem 1.5rem;
+    @include flex(null, row);
+    flex-wrap: wrap;
+    border-top: 1px solid $secondary-color-Cloud;
+    margin-top: 1px;
+
+    &--special {
+        border-top: none;
+    }
+
+    &:hover {
+        background-color: rgba(46, 102, 230, .07);
+    }
+
+    @include tablet {
+        padding: 1rem 2rem;
+        flex-wrap: nowrap;
+        @include flex(space-between, row);
+    }
+
+    &__wh {
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin: 0;
+            width: 8rem;
+            flex-grow: 1;
+        }
+    }
+
+    &__address {
+        margin-bottom: 1rem;
+        width: 7rem;
+
+        @include tablet {
+            margin: 0;
+            width: 8rem;
+            flex-grow: 1;
+        }
+
+    }
+
+    &__contact {
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin: 0;
+            width: 8rem;
+            flex-grow: 1;
+
+        }
+    }
+
+    &__contact-info {
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin: 0;
+            width: 10rem;
+            flex-grow: 1;
+
+        }
+    }
+
+    &__heading--style {
+        @include textStyle($secondary-color-Slate, 0.6875rem, 1rem, 600);
+        margin-bottom: .25rem;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__p--style {
+        @include textStyle($primary-color-Instock-Black, 0.8125rem, 1.25rem, 400);
+        max-width: 9rem;
+
+        @include tablet {
+            @include textStyle($primary-color-Instock-Black, 0.875rem, 1.375rem, 400);
+            max-width: 8rem;
+        }
+
+        @include desktop {
+            max-width: 14rem;
+        }
+    }
+
+    &__container {
+        @include flex(space-between, column);
+        width: 50%;
+
+        @include tablet {
+            @include flex(space-between, row);
+            width: auto;
+            flex-grow: 1;
+        }
+    }
+
+    &__icons {
+        @include flex(space-between, row);
+        width: 100%;
+
+        @include tablet {
+            width: auto;
+        }
+
+        &-delete {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+            @include tablet {
+                margin-right: 1rem;
+            }
+        }
+
+        &-edit {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    &__button {
+        background-color: transparent;
+        @include flex(space-between, row);
+        box-sizing: border-box;
+        border: none;
+        height: 1.5rem;
+        line-height: 1.5rem;
+
+        &-span {
+            height: 100%;
+
+            &-image {
+                height: 100%;
+            }
+
+            &-text {
+                @include textStyle($primary-color-Instock-Indigo, .8125rem, null, 600);
+                vertical-align: middle;
+
+                @include tablet {
+                    @include textStyle($primary-color-Instock-Indigo, 0.875rem, null, 600);
+                }
+            }
+        }
+    }
+}

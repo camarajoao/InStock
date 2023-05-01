@@ -1,0 +1,89 @@
+@use "../../../styles/partials/global" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.form-field-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-field-label {
+    @include textStyle($primary-color-Instock-Black, 0.8125rem, 1.25rem, 600);
+    margin-bottom: 0.25rem;
+}
+
+.form-field-radio-container{
+    display:flex;
+    
+    &--text{
+        margin-right: 0.5rem;
+        font-size: 0.813rem;
+    }
+}
+
+.form-field-radios{
+    display:flex;
+    justify-content: space-between;
+
+    @include tablet {
+        justify-content: flex-start;
+    }
+
+}
+
+.form-field-radio {
+    height: 16px;
+    border: 1px solid $secondary-color-Cloud;
+    margin-right: 0.5rem;
+
+    &--error {
+        border: 1px solid $supporting-color-Red;
+    }
+
+    @include tablet {
+        height: 16px;
+        margin-bottom: 1.5rem;
+    }
+
+    &--last {
+        @include tablet {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &:focus {
+        border: none;
+        outline: 1px solid $primary-color-Instock-Indigo;
+    }
+}
+
+.form-field-error {
+    display: none;
+    border: none;
+
+    &--show {
+        display: flex;
+        align-items: center;
+        position: relative;
+        bottom: 0.75rem;
+
+        @include tablet {
+            bottom: 1.25rem;
+        }
+
+        &--last {
+            @include tablet {
+                bottom: 0.25rem;
+            }
+        }
+    }
+
+    &__icon {
+        margin-right: 0.25rem;
+    }
+
+    &__message {
+        @include textStyle($supporting-color-Red, 0.75rem, 1.125rem, 400);
+    }
+}

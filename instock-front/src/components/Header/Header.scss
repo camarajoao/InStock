@@ -1,0 +1,35 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.main-header{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: $background-color-Graphite;
+    z-index: -1;
+    height: 12.5rem;
+    
+    @include tablet {
+        flex-direction: row;
+        align-items: normal;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        margin: 1.5rem 0rem;
+    
+        @include tablet {
+            margin: 2rem;
+            margin-right: 0rem;
+        }
+    
+        @include desktop {
+            margin-left: 8.125rem;
+        }
+
+        &--link {
+            max-height: 5rem;
+        }
+    }
+}

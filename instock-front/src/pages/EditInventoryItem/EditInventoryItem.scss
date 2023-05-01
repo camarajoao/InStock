@@ -1,0 +1,56 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.edit-warehouse-page {
+    background-color: $primary-color-White;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    margin: 0rem 1rem;
+    margin-top: -4rem;
+
+    @include tablet {
+        margin: 0rem 2rem;
+        margin-top: -5.875rem;
+    }
+
+    @include desktop {
+        margin: 0rem 8.125rem;
+        margin-top: -5.875rem;
+    }
+}
+
+.edit-warehouse-header {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 1.5rem;
+    padding-top: 2rem;
+    margin: 0rem 1.5rem;
+
+    @include tablet {
+        margin: 0rem 2rem;
+    }
+
+    @include desktop {
+        margin: 0rem 2.5rem;
+    }
+
+    &__title {
+        @include textStyle($primary-color-Instock-Black, 1.75rem, 2.25rem, 600);
+        margin-left: 0.75rem;
+
+        @include tablet {
+            @include textStyle($primary-color-Instock-Black, 2rem, 2.5rem, 600);
+        }
+    }
+
+    &__back-arrow {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

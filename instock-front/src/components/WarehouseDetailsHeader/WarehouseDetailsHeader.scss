@@ -1,0 +1,154 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.warehouse-details-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    padding-top: 2rem;
+    margin: 0rem 1.5rem;
+
+    @include tablet {
+        margin: 0rem 2rem;
+    }
+
+    @include desktop {
+        margin: 0rem 2.5rem;
+    }
+
+    &__left-container {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        margin-top: -0.5rem;
+    }
+
+    &__back-arrow {
+        height: 24px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__warehouse-name {
+        @include textStyle($primary-color-Instock-Black, 1.75rem, 2.25rem, 600);
+        margin-left: 0.75rem;
+
+        @include tablet {
+            @include textStyle($primary-color-Instock-Black, 2rem, 2.5rem, 600);
+        }
+    }
+
+    &__edit-button--mobile {
+        background-color: $primary-color-Instock-Indigo;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: none;
+        background-image: url("../../assets/Icons/edit-24px-white.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__edit-button {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0.5rem 1rem;
+            background-color: $primary-color-Instock-Indigo;
+            width: 81px;
+            height: 38px;
+            border-radius: 20px;
+            border: none;
+            background-image: url("../../assets/Icons/edit-24px-white.svg");
+            background-position: left 0.75rem top 0.5rem;
+            background-repeat: no-repeat;
+            @include textStyle($primary-color-White, 0.875rem, 1.375rem, 600);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.warehouse-details {
+    border-top: 1px solid $secondary-color-Cloud;
+    padding: 1rem 1.5rem;
+
+    @include tablet {
+        padding: 1.5rem 2rem;
+        display: flex;
+    }
+
+    @include desktop {
+        padding: 1.5rem 2.5rem;
+    }
+
+    &__heading {
+        @include textStyle($secondary-color-Slate, 0.6875rem, 1rem, 600);
+        margin-bottom: 0.25rem;
+
+        @include tablet {
+            @include textStyle($secondary-color-Slate, 0.75rem, 1.125rem, 600);
+        }
+    }
+
+    &__info {
+        @include textStyle($primary-color-Instock-Black, 0.8125rem, 1.25rem, 400);
+
+        @include tablet {
+            @include textStyle($primary-color-Instock-Black, 0.875rem, 1.375rem, 400);
+        }
+    }
+
+    &__address-container {
+        @include tablet {
+            width: 33.5%;
+            margin-right: 2rem;
+        }
+    }
+
+    &__address {
+        @include tablet {
+            width: 10rem;
+        }
+    }
+
+    &__contact-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2.25rem;
+        width: 100%;
+
+        @include tablet {
+            margin: 0;
+            padding-left: 2.5rem;
+            border-left: 1px solid $secondary-color-Cloud;
+            width: 52.5%;
+        }
+
+        @include desktop {
+            padding-right: 6.5%;
+        }
+    }
+
+    &__contact-info-container {
+        margin-right: 10%;
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+}

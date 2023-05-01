@@ -1,0 +1,87 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.inventory {
+
+    &__category-selector--wider {
+        display: none;
+
+        @include tablet {
+            @include textStyle($secondary-color-Slate, 0.75rem, 1.125rem, 600);
+            display: contents;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $background-color-Light-Grey;
+            height: 2.5rem;
+        }
+
+    }
+
+    &__left {
+        @include tablet {
+            @include flex(space-between, row);
+            flex-grow: 1;
+            width: 40%
+        }
+
+    }
+
+    &__middle {
+        @include tablet {
+            @include flex(space-between, row);
+            flex-grow: 1;
+            width: 50%
+        }
+    }
+
+    &__right {
+        @include tablet {
+            margin-left: 1rem;
+        }
+    }
+
+    &__toggle-alt {
+        display: flex;
+        align-items: center;
+
+        &-item {
+            width: 10rem;
+            flex-grow: 1;
+        }
+
+        &-category {
+            width: 7rem;
+            flex-grow: 1;
+        }
+
+        &-status {
+            width: 10rem;
+            flex-grow: 1;
+        }
+
+        &-qty {
+            width: 8rem;
+            flex-grow: 1;
+        }
+    }
+
+    &__exist-message {
+        position: absolute;
+        top: 22rem;
+        @include textStyle($secondary-color-Slate, 1.5rem, 2rem, 600);
+
+        &--mobile {
+            position: absolute;
+            top: 25.5rem;
+            left: 2rem;
+            @include textStyle($secondary-color-Slate, 1.25rem, 1.375rem, 600);
+
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+}

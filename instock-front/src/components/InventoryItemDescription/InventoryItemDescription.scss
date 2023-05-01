@@ -1,0 +1,251 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    padding-top: 2rem;
+    margin: 0rem 1.5rem;
+
+    @include tablet {
+        margin: 0rem 2rem;
+    }
+
+    @include desktop {
+        margin: 0rem 2.5rem;
+    }
+
+    &__arrow {
+        cursor: pointer;
+    }
+
+    &__left-container {
+        display: flex;
+    }
+
+    &__item-name {
+        @include textStyle($primary-color-Instock-Black, 1.75rem, 2.25rem, 600);
+        margin-left: 0.75rem;
+
+        @include tablet {
+            @include textStyle($primary-color-Instock-Black, 2rem, 2.5rem, 600);
+        }
+    }
+
+    &__button--mobile {
+        background-color: $primary-color-Instock-Indigo;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: none;
+        background-image: url("../../assets/Icons/edit-24px-white.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $background-color-Graphite;
+        }
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__button {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0.5rem 1rem;
+            background-color: $primary-color-Instock-Indigo;
+            width: 81px;
+            height: 38px;
+            border-radius: 20px;
+            border: none;
+            background-image: url("../../assets/Icons/edit-24px-white.svg");
+            background-position: left 0.75rem top 0.5rem;
+            background-repeat: no-repeat;
+            @include textStyle($primary-color-White, 0.875rem, 1.375rem, 600);
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $background-color-Graphite;
+        }
+    }
+}
+
+.inventory {
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    &__list {
+        @include textStyle($primary-color-Instock-Black, 0.875rem, 1.375rem, 400);
+        border-top: 1px solid $secondary-color-Cloud;
+        width: 100%;
+        background-color: $primary-color-White;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+
+        @include tablet {
+            flex-wrap: none;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+    }
+
+    &__top-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            justify-content: space-between;
+            border-right: 1px solid $secondary-color-Cloud;
+            margin-right: 1rem;
+        }
+
+    }
+
+    &__description-container {
+        margin-bottom: 1rem;
+        width: 100%;
+
+        @include tablet {
+            margin-bottom: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    &__item-description {
+        @include textStyle($secondary-color-Slate, 0.6875rem, 1rem, 600);
+        margin-bottom: 0.25rem;
+
+        @include tablet {
+ 
+        }
+    }
+
+    &__text-description {
+        @include textStyle($primary-color-Instock-Black, 0.875rem, 1.375rem, 400);
+
+        @include tablet {
+ 
+        }
+    }
+
+    &__cat-container {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    &__cat {
+        @include textStyle($secondary-color-Slate, 0.6875rem, 1rem, 600);
+        margin-bottom: 0.25rem;
+    }
+
+    &__cat-render {
+        @include textStyle($primary-color-Instock-Black, 0.875rem, 1.375rem, 400);
+    }
+
+    &__bottom-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            width: 45%;
+            justify-content: space-between;
+        }
+    }
+
+    &__stat-container {
+        margin-bottom: 1rem;
+        width: 45%;
+
+        @include tablet {
+            width: 3rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__stat {
+         @include textStyle($secondary-color-Slate, 0.6875rem, 1rem, 600);
+        margin-bottom: 0.25rem;
+    }
+
+    &__status-tag--in {
+        color: Green;
+        background-color: rgba(21, 132, 99, .07);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        width: 4rem;
+        height: 1.5rem;
+        border-radius: 1.25rem;
+
+        @include tablet {
+            height: 1.625rem;
+        }
+    }
+
+    &__status-tag--out {
+        color: red;
+        background-color: rgba(201, 69, 21, .07);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        width: 6rem; 
+        height: 1.5rem;
+        border-radius: 1.25rem;
+
+        @include tablet {
+            height: 1.625rem;
+        }
+    }
+
+    &__quantity-container {
+        margin-bottom: 1rem;
+        width: 45%;
+
+        @include tablet {
+    
+        }
+    }
+
+    &__quantity {
+        @include textStyle($secondary-color-Slate, 0.6875rem, 1rem, 600);
+        margin-bottom: 0.25rem;
+
+    }
+
+    &__ware-container {
+        width: 100%;
+    }
+
+    &__ware {
+        @include textStyle($secondary-color-Slate, 0.6875rem, 1rem, 600);
+        margin-bottom: 0.25rem;
+
+        @include tablet {
+    
+        }
+    }
+} 

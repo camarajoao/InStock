@@ -1,0 +1,89 @@
+@use "../../../styles/partials/global" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+
+
+.temp {
+    padding: 0 1rem;
+}
+
+.sorter {
+    display: none;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    background-color: rgba(247, 248, 249, 0.7);
+    border: none;
+
+    @include tablet {
+        @include flex (null, row);
+        box-sizing: border-box;
+        padding: .6875rem 2rem;
+        height: 2.5rem;
+    }
+
+    &__container-left {
+        @include tablet {
+            @include flex(space-between, row);
+            flex-grow: 1;
+        }
+    }
+
+    &__container-right {
+        @include tablet {
+            @include flex(space-between, row);
+            flex-grow: 1;
+        }
+    }
+
+    &__warehouse {
+        width: 8rem;
+        flex-grow: 1;
+    }
+
+    &__address {
+        width: 8rem;
+        flex-grow: 1;
+    }
+
+    &__contact-name {
+        width: 8rem;
+        flex-grow: 1;
+    }
+
+    &__contact-info {
+        width: 10rem;
+        flex-grow: 1;
+    }
+
+
+
+    &__heading {
+        @include flex (null, row);
+    }
+
+    &__actions {
+        display: flex;
+        width: 4rem;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+
+    &__text {
+        &-p {
+            @include textStyle($secondary-color-Slate, .75rem, 1.125rem, 600);
+            width: 100%;
+        }
+    }
+
+    &__icon {
+        @include flex (center, column);
+        margin-left: .25rem;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        &-icon {
+            height: .75rem;
+        }
+    }
+}
