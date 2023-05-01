@@ -10,7 +10,8 @@ InStock is a full-stack application with a modern React front-end communicating 
 ## Screenshots
 
 ![InStock Home Page](/InStock-media/home_page-desktop.png)
-
+![InStock Home Page](/InStock-media/delete_inventory_modal-tablet.png)
+![InStock Home Page](/InStock-media/edit_warehouse-tablet.png)
 
 ## Features
 
