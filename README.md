@@ -1,7 +1,7 @@
 
 # InStock
 
-InStock a fully functional and fully responsive Inventory Management System. With InStock, you can keep track of a single or multiple warehouses' inventories.
+InStock is a fully functional and fully responsive Inventory Management System. With InStock, you can keep track of a single or multiple warehouses' inventories.
 
 InStock is a full-stack application with a modern React front-end communicating with a robust Express back-end built from the ground-up.
 
